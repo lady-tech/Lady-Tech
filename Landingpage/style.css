@@ -1,0 +1,247 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration:none;
+  }
+  
+  body{
+    height: 100vh;
+    width: 100vw;
+    
+  }
+  
+  .content{
+    width: 935px;
+    height: 520px;
+    margin-left: -120px;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+  }
+  
+  .navigation{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+  }
+  
+  
+  .bar{
+    margin: 6px;
+    border: 2px solid #FFF;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    width: 70px;
+    height: 18px;
+  }
+  
+  .bar:hover{
+    transition: 0.7s;
+    background-color: #FFF;
+  }
+  
+  input{
+    display: none;
+  }
+  
+  .slides{
+    display: flex;
+    width: 400%;
+    height: 100%;
+  }
+  
+  .slide{
+    width: 25%;
+    transition: 0.6s;
+  }
+  
+  .slide img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  #slide1:checked ~ .s1{
+    margin-left: 0%;
+  }
+  
+  #slide2:checked ~ .s1{
+    margin-left: -25%;
+  }
+  
+  #slide3:checked ~ .s1{
+    margin-left: -50%;
+  }
+  
+  #slide4:checked ~.s1{
+    margin-left: -75%;
+  }
+
+.eupoço{
+  margin-top: -110px;
+  margin-right: -350px;
+  text-align: justify;
+}
+
+@media screen and (max-width: 360px){
+  .content{
+    width: 25px;
+    height: 20px;
+    overflow: hidden;
+    border-radius: 1rem;
+    position: absolute;
+    margin-left: -120px;
+    margin-top: 50px;
+    text-align: 10px;
+    padding: 20px;
+    top: 25%;
+    left: 25%;
+  }
+  
+  .navigation{
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+  }
+  
+  
+  .bar{
+    margin: 6px;
+    border: 2px solid #FFF;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    width: 10px;
+    height: 5px;
+  }
+  
+  .bar:hover{
+    transition: 0.7s;
+    background-color: #FFF;
+  }
+  
+  input{
+    display: none;
+  }
+  
+  .slides{
+    display: flex;
+    width: 400%;
+    height: 100%;
+  }
+  
+  .slide{
+    width: 25%;
+    transition: 0.6s;
+  }
+  
+  .slide img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  #slide1:checked ~ .s1{
+    margin-left: 0%;
+  }
+  
+  #slide2:checked ~ .s1{
+    margin-left: -25%;
+  }
+  
+  #slide3:checked ~ .s1{
+    margin-left: -50%;
+  }
+  
+  #slide4:checked ~.s1{
+    margin-left: -75%;
+  }
+
+.eupoço{
+  margin-top: -10px;
+  margin-right: -350px;
+  text-align: justify;
+}
+}
+
+
+
+@media screen and (max-width: 360px) {
+  .content {
+    width: calc(100% - 40px); /* Usando calc() para subtrair a margem */
+    height: auto; /* Ajustando a altura automaticamente */
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative; /* Alterado para relativo para respeitar o layout do documento */
+    margin: 20px auto; /* Centralizando horizontalmente e aplicando margens */
+    padding: 20px;
+    text-align: center; /* Centralizando o texto */
+    top: auto; /* Removido o posicionamento absoluto */
+    left: auto;
+  }
+
+  .navigation {
+    position: relative; /* Alterado para relativo para respeitar o layout do documento */
+    bottom: auto; /* Removido o posicionamento absoluto */
+    left: auto;
+    transform: none; /* Removendo a transformação */
+    display: flex;
+    justify-content: center; /* Centralizando horizontalmente */
+  }
+
+  .bar {
+    margin: 6px;
+    border: 2px solid #FFF;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    width: 10px;
+    height: 5px;
+  }
+
+  .bar:hover {
+    background-color: #FFF;
+  }
+
+  input {
+    display: none;
+  }
+
+  .slides {
+    display: flex;
+    width: 400%;
+    height: auto; /* Ajustando a altura automaticamente */
+    overflow: hidden; /* Ocultando conteúdo extra */
+  }
+
+  .slide {
+    width: 25%;
+    transition: 0.6s;
+    flex-shrink: 0; /* Impedindo a redução de tamanho dos slides */
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto; /* Ajustando a altura automaticamente */
+  }
+
+  /* Estilos adicionais */
+  .eupoço {
+    margin: 20px auto; /* Centralizando horizontalmente e aplicando margens */
+    text-align: justify;
+    font-size: 9px;
+    display: flex;
+
+  }
+  h1{
+    font-size: 15px;
+    margin-top: -700px;
+  }
+  .bg__blur{
+   font-size: 15px;
+  }
+
+}

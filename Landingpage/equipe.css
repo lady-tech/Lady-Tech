@@ -1,0 +1,71 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.team__section {
+  display: flex;
+  justify-content: center;
+  align-items:inherit;
+  flex-wrap: wrap;
+}
+
+.team__card {
+  width: 300px;
+  height: 350px;
+  margin: 50px;
+  margin-top: -20px;
+  background-color: #7b5ace3d;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.team__card:hover {
+  transform: scale(1.05);
+}
+
+.team__member {
+  text-align: center;
+  padding: 20px;
+}
+
+.member__image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 10px;
+  padding: 20px;
+}
+
+.member__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  object-position: center center;
+}
+
+.team__member h3 {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.team__member p {
+  color: #fff;
+}
+
+/* Adicionando media queries para telas menores */
+@media only screen and (max-width: 36px) {
+  .team__card {
+    width: 100%; /* Ocupar a largura total da tela em telas menores */
+  }
+
+  .member__image {
+    width: 100%; /* Ocupar a largura total da tela em telas menores */
+  }
+}

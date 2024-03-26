@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="PT">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="shortcut icon" href="assets/favicon.png" />
+  <title>Lady Tech</title>
+</head>
+<body>
+  <nav>
+    <div class="nav__logo">
+      <a href="#"><img src="assets/logo.png" alt="logo" /></a>
+    </div>
+    <div class="menu__icon">
+      <i class="ri-menu-line"></i>
+    </div>
+    <ul class="nav__links">
+      <li class="link"><a href="index.html">Início</a></li>
+      <li class="link"><a href="quem.html">Quem somos</a></li>
+      <li class="link"><a href="serviços.html">Serviços</a></li>
+      <li class="link"><a href="equipe.html">Equipe</a></li>
+    </ul>
+  </nav>
+  <header class="section__container header__container">
+    <div class="header__content">
+      <span class="bg__blur"></span>
+      <span class="bg__blur header__blur"></span>
+      <br><br><br><br>
+      <h1><span>LADY</span> TECH</h1>
+      <h4>Sua visão, nossos códigos</h4>
+
+      <p>
+        A Lady Tech é uma empresa do mercado de desenvolvimento de softwares e websites, dedicada a oferecer soluções digitais personalizadas e inovadoras para empresas de todos os portes. Contando com uma equipe excepcionalmente talentosa de desenvolvedoras apaixonadas por tecnologia, estamos totalmente comprometidas em criar produtos de excelência que impulsionem o crescimento e o sucesso de nossos clientes no universo digital. Com especialização em plataformas web, estamos aqui para transformar suas ideias em realidade e elevar sua presença online para o próximo patamar de destaque e relevância.
+      </p>
+    </div>
+  </header>
+
+
+  <!-- Adicione este código ao final do corpo do HTML -->
+<div class="binary-rain"></div>
+
+<script>
+  // Função para gerar números binários aleatórios
+  function generateBinary() {
+    return Math.floor(Math.random() * 2);
+  }
+
+  // Função para criar e animar a "chuva" de números binários
+  function createBinaryRain() {
+    const binaryRainContainer = document.querySelector('.binary-rain');
+
+    // Configurações iniciais
+    const numberOfBinaries = 100; // Número de números binários
+    const animationDurationBase = 3; // Duração base da animação em segundos
+    const speedVariation = 2; // Variação na velocidade de queda
+    const opacityVariation = 0.5; // Variação na opacidade
+
+    // Loop para criar os números binários
+    for (let i = 0; i < numberOfBinaries; i++) {
+      const binaryElement = document.createElement('span');
+      binaryElement.classList.add('binary-drop');
+      binaryElement.innerText = generateBinary();
+
+      // Configuração da animação
+      const animationDuration = animationDurationBase + Math.random() * speedVariation;
+      binaryElement.style.animationDuration = `${animationDuration}s`;
+      binaryElement.style.left = `${Math.random() * 100}vw`;
+      binaryElement.style.opacity = 0.5 + Math.random() * opacityVariation;
+
+      // Adiciona o número binário ao contêiner
+      binaryRainContainer.appendChild(binaryElement);
+    }
+  }
+
+  // Chama a função para criar a "chuva" de números binários ao carregar a página
+  document.addEventListener('DOMContentLoaded', createBinaryRain);
+</script>
+
+
+
+  </body>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        document.querySelector('.link a.active')?.classList.remove('active');
+        this.classList.add('active');
+  
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+  <div class="footer">
+    <div class="social-icons">
+      <a href="https://www.instagram.com/lady.tech_/" target="_blank" class="icon instagram"></a>
+      <a href="https://github.com/lady-tech?tab=repositories" target="_blank" class="icon github"></a>
+      <a href="mailto:ladytech.infor@gmail.com" class="icon gmail"></a>
+    </div>
+    <br>
+        <div class="copyright">
+            <p><sup>&copy;</sup> 2024 Lady Tech</p>
+        </div>
+    </div>
+</div>
+
+
+  </div>
+</body>
+</html>
+
+
+
+
+  <script src="menu.js"></script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+  
+        document.querySelector('.link a.active')?.classList.remove('active');
+        this.classList.add('active');
+  
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        targetElement.scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+    // Seleciona o ícone do menu
+    const menuIcon = document.querySelector('.menu__icon');
+    // Seleciona o menu de navegação
+    const navLinks = document.querySelector('.nav__links');
+  
+    // Adiciona um ouvinte de evento de clique ao ícone do menu
+    menuIcon.addEventListener('click', function() {
+      // Alternar a classe 'menu__open' no menu de navegação para exibi-lo ou ocultá-lo
+      navLinks.classList.toggle('menu__open');
+    });
+  </script>
+</body>
+</html>
